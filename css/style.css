@@ -8,6 +8,7 @@ body {
     height: 100vh;
     text-align: center;
     font-family: Verdana, Arial, sans-serif;
+    color: #222;
 }
 
 /* GENERAL TEXT */
@@ -19,7 +20,6 @@ h1 {
 /* HEADER */
 
 header {
-    background: green;
     height: 5vh;
     line-height: 5vh;
 }
@@ -27,7 +27,7 @@ header {
 /* NAVBAR */
 
 nav {
-    background: gray;
+    background: #32b16b;
     height: 5vh;
     display: flex;
     align-items: center;
@@ -38,10 +38,13 @@ nav ul li {
     display: inline-block;
 }
 
+nav a {
+    color: #fff;
+}
+
 /* MAIN BODY */
 
 main {
-    background: lemonchiffon;
     height: 90vh;
     overflow: hidden;
     user-select: none;
@@ -50,7 +53,6 @@ main {
 /* GAME AREA */
 #game-area {
     height: 75vh;
-    background: #abcdef;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
@@ -66,13 +68,13 @@ main {
 }
 
 #game-area .row div {
-    background: #FFCCFF;
+    background: #fff;
     width: calc((100% / 6) - 20px);
     height: 0px;
     padding-bottom: calc((100% / 6) - 30px);
     margin: 3px;
-    border-radius: 5px;
-    border: solid 5px gray;
+    border-radius: 15px;
+    border: solid 5px #999;
     position: relative;
 }
 
@@ -81,6 +83,7 @@ main {
     padding-bottom: calc((100% / 6) - 20px);
     border: none;
     background: none;
+    color: #999;
 }
 
 #game-area .row div p {
@@ -96,7 +99,6 @@ main {
     width: 100vw;
     height: 15vh;
     padding: 0 10vw;
-    background: green;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -113,7 +115,7 @@ main {
 }
 
 #keyboard .row div {
-    background: #ccc;
+    background: #eee;
     color: #444;
     display: flex;
     align-items: center;
@@ -130,11 +132,11 @@ main {
 }
 
 #keyboard .row div:hover {
-    background: #888;
-    color: #bbb;
+    background: #ddd;
+    color: #999;
 }
 
 #keyboard .row div:active {
-    background: #FFCCFF;
-    color: white;
+    background: #eee;
+    color: #ddd;
 }
