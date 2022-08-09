@@ -1,4 +1,3 @@
-/* GENERAL STYLING */
 * {
     padding: 0;
     margin: 0;
@@ -6,42 +5,136 @@
 }
 
 body {
-    font-family: Arial;
     height: 100vh;
-    background: pink;
     text-align: center;
+    font-family: Verdana, Arial, sans-serif;
 }
 
+/* GENERAL TEXT */
 
-/* MENU STYLING */
+h1 {
+    height: 4vmin;
+}
+
+/* HEADER */
+
+header {
+    background: green;
+    height: 5vh;
+    line-height: 5vh;
+}
+
+/* NAVBAR */
+
 nav {
-    width: 100%;
-    background: black;
-    color: white;
-}
-
-nav a {
-    color: white;
+    background: gray;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
 }
 
-/* KEYBOARD STYLING */
-#keyboard {
-    width: 100%;
+/* MAIN BODY */
+
+main {
+    background: lemonchiffon;
+    height: 90vh;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* GAME AREA */
+#game-area {
+    height: 75vh;
+    background: #abcdef;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    align-content: center;
+}
+
+#game-area .row {
+    width: 100%;
+    padding: 0 30%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-area .row div {
+    background: #FFCCFF;
+    width: calc((100% / 6) - 20px);
+    height: 0px;
+    padding-bottom: calc((100% / 6) - 30px);
+    margin: 3px;
+    border-radius: 5px;
+    border: solid 5px gray;
+    position: relative;
+}
+
+#game-area .row div:first-of-type {
+    width: 10px;
+    padding-bottom: calc((100% / 6) - 20px);
+    border: none;
+    background: none;
+}
+
+#game-area .row div p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* KEYBOARD FORMATTING */
+
+#keyboard {
+    width: 100vw;
+    height: 15vh;
+    padding: 0 10vw;
+    background: green;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-transform: uppercase;
 }
 
 #keyboard .row {
     width: 100%;
+    min-width: 320px;
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     justify-content: center;
+    align-items: center;
 }
 
 #keyboard .row div {
-    width: 10%;
+    background: #ccc;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5vw;
+    height: calc((15vh / 3) - (2px * 4));
+    margin: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#keyboard .row div.bigbutton {
+    width: calc(5vw * 1.5);
+}
+
+#keyboard .row div:hover {
+    background: #888;
+    color: #bbb;
+}
+
+#keyboard .row div:active {
+    background: #FFCCFF;
+    color: white;
 }
