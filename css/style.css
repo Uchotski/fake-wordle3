@@ -1,0 +1,47 @@
+/* GENERAL STYLING */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    height: 100vh;
+    background: pink;
+    text-align: center;
+}
+
+
+/* MENU STYLING */
+nav {
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+nav a {
+    color: white;
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* KEYBOARD STYLING */
+#keyboard {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#keyboard .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#keyboard .row div {
+    width: 10%;
+}
