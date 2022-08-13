@@ -21,7 +21,7 @@ const keyboardInput = () => {
         input = event.key.toLowerCase();
         if (input.toLowerCase() === "backspace") { input = "delete"; }
     } else {
-        return console.log("Something went wrong!");
+        returnconsole.log("Something went wrong!");
     }
 
     //Filter Input to contain only alphabetical characters...
