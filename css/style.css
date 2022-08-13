@@ -73,7 +73,7 @@ nav a {
     text-decoration: none;
 }
 
-nav a.start {
+nav a#start {
     line-height: 4vh;
     background: var(--button-main);
     color: var(--white);
@@ -90,11 +90,11 @@ nav ul li a:active {
     color: var(--mid-green);
 }
 
-nav ul li a.start:hover {
+nav ul li a#start:hover {
     background: var(--button-hover);
 }
 
-nav ul li a.start:active {
+nav ul li a#start:active {
     background: var(--button-active);
     color:var(--button-text-active);
 }
