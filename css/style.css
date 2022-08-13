@@ -15,11 +15,13 @@ body {
 
 h1 {
     font-size: 4vmin;
+    color: #32b16b;
 }
 
 /* HEADER */
 
 header {
+    background: #e6f5ed;
     height: 5vh;
     line-height: 5vh;
 }
