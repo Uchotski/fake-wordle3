@@ -14,9 +14,6 @@ const keyboardInput = () => {
     let input;
 
     //FUNCTIONS:
-
-    console.log(event.type);
-
     //Handling User Input:
     if (event.type === "click") {
         input = event.target.innerHTML;
@@ -24,7 +21,7 @@ const keyboardInput = () => {
         input = event.key.toLowerCase();
         if (input.toLowerCase() === "backspace") { input = "delete"; }
     } else {
-        console.log("Something went wrong!");
+        return console.log("Something went wrong!");
     }
 
     //Filter Input to contain only alphabetical characters...
@@ -32,7 +29,6 @@ const keyboardInput = () => {
 
     //Adds letters to the input
     if (input.length === 1 && col <= wordLength) {
-        console.log(input);
         tilesInRow[col].innerHTML = `<p>${input}</p>`;
         if (col < wordLength + 1) col++;
     }
@@ -53,6 +49,5 @@ const keyboardInput = () => {
     return;
 }
 
-document.addEventListener("keydown", function() { console.log(event.key); });
 document.addEventListener("keydown", keyboardInput);
 document.getElementById("keyboard").addEventListener("click", keyboardInput);
