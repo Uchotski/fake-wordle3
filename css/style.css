@@ -150,6 +150,7 @@ main {
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    text-transform: uppercase;
 }
 
 #game-window .row {
