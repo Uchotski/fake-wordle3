@@ -81,6 +81,8 @@ main {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
+/* Game Window, within Game Area */
+
 #game-window {
     height: 65vh;
     width: 80%;
@@ -111,7 +113,15 @@ main {
 }
 
 #game-window .row:hover {
-    background: #eee;
+    background: #e6f5ed;
+}
+
+#game-window .row:hover div {
+    border-color: #777;
+}
+
+#game-window .row:hover div:first-of-type p {
+    color: #777;
 }
 
 #game-window .row div {
@@ -119,7 +129,7 @@ main {
     padding-bottom: calc((100% / 6) - 10px);
     position: relative;
     background: #fff;
-    border: solid 5px #eee;
+    border: solid 5px #999;
     border-radius: 10%;
     margin: 3px;
 }
@@ -130,13 +140,35 @@ main {
     border: none;
     background: none;
     overflow: hidden;
+    color: #999;
 }
+
+/* Positions text within the boxes */
 
 #game-window .row div p {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* Scrollbar formatting */
+
+#game-window::-webkit-scrollbar {
+    width: 10px;
+}
+
+#game-window ::-webkit-scrollbar-track {
+    background: none;
+}
+
+#game-window::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+}
+
+#game-window::-webkit-scrollbar-thumb:hover {
+    background: #777;
 }
 
 /* KEYBOARD FORMATTING */
