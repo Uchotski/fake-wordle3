@@ -52,41 +52,64 @@ main {
 
 /* GAME AREA */
 #game-area {
-    height: 75vh;
-    display: flex;
-    flex-flow: row wrap;
-    align-content: center;
+    height: 65vh;
+    margin: auto;
+    width: 100%;
 }
 
-#game-area .row {
+#game-window {
+    height: 65vh;
+    width: 80%;
+    min-width: 300px;
+    max-width: 750px;
+    margin: auto;
+    overflow-y: scroll;
+    background: #ffccff;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-window .row {
     width: 100%;
-    padding: 0 30%;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
 }
 
-#game-area .row div {
-    background: #fff;
-    width: calc((100% / 6) - 20px);
-    height: 0px;
-    padding-bottom: calc((100% / 6) - 30px);
-    margin: 3px;
-    border-radius: 15px;
-    border: solid 5px #999;
-    position: relative;
+#game-window .row:first-of-type {
+    margin-top: 10px;
 }
 
-#game-area .row div:first-of-type {
-    width: 10px;
-    padding-bottom: calc((100% / 6) - 20px);
+#game-window .row:last-of-type {
+    margin-bottom: 10px;
+}
+
+#game-window .row:hover {
+    background: #eee;
+}
+
+#game-window .row div {
+    width: calc(100% / 6);
+    padding-bottom: calc((100% / 6) - 10px);
+    position: relative;
+    background: #fff;
+    border: solid 5px #eee;
+    border-radius: 10%;
+    margin: 3px;
+}
+
+#game-window .row div:first-of-type {
+    width: 20px;
+    height: calc(100% / 6);
     border: none;
     background: none;
-    color: #999;
+    overflow: hidden;
 }
 
-#game-area .row div p {
+#game-window .row div p {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -97,7 +120,7 @@ main {
 
 #keyboard {
     width: 100vw;
-    height: 15vh;
+    height: 25vh;
     padding: 0 10vw;
     display: flex;
     flex-flow: row wrap;
@@ -121,7 +144,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 5vw;
-    height: calc((15vh / 3) - (2px * 4));
+    height: calc((25vh / 3) - (2px * 3));
     margin: 2px;
     border-radius: 5px;
     cursor: pointer;
