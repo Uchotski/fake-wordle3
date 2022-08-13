@@ -1,3 +1,23 @@
+:root {
+    --white: #fff;
+    --font-color: #222;
+    --main-green: #32b16b;
+    --mid-green: #c1f0d7;
+    --lightest-green: #e6f5ed;
+    --button-main: orange;
+    --button-hover: rgb(248, 178, 48);
+    --button-active: rgb(243, 202, 127);
+    --button-text-active: rgb(253, 233, 194);
+    --tile-border: #777;
+    --tile-border-hover: #999;
+    --keyboard-font-color: #444;
+    --keyboard-bg: #eee;
+    --keyboard-hover: #ddd;
+    --keyboard-font-hover: #999;
+    --keyboard-active: #eee;
+    --keyboard-font-active: #ddd;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -8,20 +28,20 @@ body {
     height: 100vh;
     text-align: center;
     font-family: Verdana, Arial, sans-serif;
-    color: #222;
+    color: var(--font-color);
 }
 
 /* GENERAL TEXT */
 
 h1 {
     font-size: 4vmin;
-    color: #32b16b;
+    color: var(--main-green);
 }
 
 /* HEADER */
 
 header {
-    background: #e6f5ed;
+    background: var(--lighest-green);
     height: 5vh;
     line-height: 5vh;
 }
@@ -29,7 +49,7 @@ header {
 /* NAVBAR */
 
 nav {
-    background: #32b16b;
+    background: var(--main-green);
     height: 5vh;
     font-size: 2vh;
     display: flex;
@@ -45,7 +65,7 @@ nav ul li {
 }
 
 nav a {
-    color: #fff;
+    color: var(--white);
     display: block;
     padding: 0 20px;
     margin: 0 10px;
@@ -55,8 +75,8 @@ nav a {
 
 nav a.start {
     line-height: 4vh;
-    background: orange;
-    color: white;
+    background: var(--button-main);
+    color: var(--white);
     border-radius: 5px;
 }
 
@@ -67,16 +87,16 @@ nav ul li a:hover {
 
 nav ul li a:active {
     text-decoration: none;
-    color: #c1f0d7;
+    color: var(--mid-green);
 }
 
 nav ul li a.start:hover {
-    background: rgb(248, 178, 48);
+    background: var(--button-hover);
 }
 
 nav ul li a.start:active {
-    background:rgb(243, 202, 127);
-    color:rgb(253, 233, 194);
+    background: var(--button-active);
+    color:var(--button-text-active);
 }
 
 /* MAIN BODY */
@@ -149,23 +169,23 @@ main {
 }
 
 #game-window .row:hover {
-    background: #e6f5ed;
+    background: var(--lightest-green);
 }
 
 #game-window .row:hover div {
-    border-color: #777;
+    border-color: var(--tile-border);
 }
 
 #game-window .row:hover div:first-of-type p {
-    color: #777;
+    color: var(--tile-border);
 }
 
 #game-window .row div {
     width: calc(100% / 6);
     padding-bottom: calc((100% / 6) - 10px);
     position: relative;
-    background: #fff;
-    border: solid 5px #999;
+    background: var(--white);
+    border: solid 5px var(--tile-border-hover);
     border-radius: 10%;
     margin: 3px;
 }
@@ -176,7 +196,7 @@ main {
     border: none;
     background: none;
     overflow: hidden;
-    color: #999;
+    color: var(--tile-border-hover);
 }
 
 /* Positions text within the boxes */
@@ -199,12 +219,12 @@ main {
 }
 
 #game-window::-webkit-scrollbar-thumb {
-    background: #999;
+    background: var(--tile-border-hover);
     border-radius: 10px;
 }
 
 #game-window::-webkit-scrollbar-thumb:hover {
-    background: #777;
+    background: var(--tile-border);
 }
 
 /* KEYBOARD FORMATTING */
@@ -229,8 +249,8 @@ main {
 }
 
 #keyboard .row div {
-    background: #eee;
-    color: #444;
+    background: var(--keyboard-bg);
+    color: var(--keyboard-font-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -249,11 +269,11 @@ main {
 /* Keyboard hover effects */
 
 #keyboard .row div:hover {
-    background: #ddd;
-    color: #999;
+    background: var(--keyboard-hover);
+    color: var(--keyboard-font-hover);
 }
 
 #keyboard .row div:active {
-    background: #eee;
-    color: #ddd;
+    background: var(--keyboard-active);
+    color: var(--keybord-font-active);
 }
