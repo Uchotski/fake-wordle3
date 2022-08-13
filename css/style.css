@@ -8,14 +8,14 @@
     --button-hover: rgb(248, 178, 48);
     --button-active: rgb(243, 202, 127);
     --button-text-active: rgb(253, 233, 194);
-    --tile-border: #777;
-    --tile-border-hover: #999;
+    --tile-border: #999;
+    --tile-border-hover: #32b16b;
     --keyboard-font-color: #444;
     --keyboard-bg: #eee;
     --keyboard-hover: #ddd;
-    --keyboard-font-hover: #999;
-    --keyboard-active: #eee;
-    --keyboard-font-active: #ddd;
+    --keyboard-font-hover: #fff;
+    --keyboard-active: #e6f5ed;
+    --keyboard-font-active: #32b16b;
 }
 
 * {
@@ -173,11 +173,11 @@ main {
 }
 
 #game-window .row:hover div {
-    border-color: var(--tile-border);
+    border-color: var(--tile-border-hover);
 }
 
 #game-window .row:hover div:first-of-type p {
-    color: var(--tile-border);
+    color: var(--tile-border-hover);
 }
 
 #game-window .row div {
@@ -185,7 +185,7 @@ main {
     padding-bottom: calc((100% / 6) - 10px);
     position: relative;
     background: var(--white);
-    border: solid 5px var(--tile-border-hover);
+    border: solid 5px var(--tile-border);
     border-radius: 10%;
     margin: 3px;
 }
@@ -196,7 +196,7 @@ main {
     border: none;
     background: none;
     overflow: hidden;
-    color: var(--tile-border-hover);
+    color: var(--tile-border);
 }
 
 /* Positions text within the boxes */
@@ -219,12 +219,12 @@ main {
 }
 
 #game-window::-webkit-scrollbar-thumb {
-    background: var(--tile-border-hover);
+    background: var(--tile-border);
     border-radius: 10px;
 }
 
 #game-window::-webkit-scrollbar-thumb:hover {
-    background: var(--tile-border);
+    background: var(--tile-border-hover);
 }
 
 /* KEYBOARD FORMATTING */
@@ -275,5 +275,5 @@ main {
 
 #keyboard .row div:active {
     background: var(--keyboard-active);
-    color: var(--keybord-font-active);
+    color: var(--keyboard-font-active);
 }
