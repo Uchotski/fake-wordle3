@@ -33,14 +33,48 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
+    width: 100%;
 }
 
 nav ul li {
     display: inline-block;
+
 }
 
 nav a {
     color: #fff;
+    display: block;
+    padding: 0 20px;
+    margin: 0 10px;
+    line-height: 5vh;
+    text-decoration: none;
+}
+
+nav a.start {
+    line-height: 4vh;
+    background: orange;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Nav hover effects */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a:active {
+    text-decoration: none;
+    color: #c1f0d7;
+}
+
+nav ul li a.start:hover {
+    background: rgb(248, 178, 48);
+}
+
+nav ul li a.start:active {
+    background:rgb(243, 202, 127);
+    color:rgb(253, 233, 194);
 }
 
 /* MAIN BODY */
@@ -208,6 +242,8 @@ main {
 #keyboard .row div.bigbutton {
     width: calc(5vw * 1.5);
 }
+
+/* Keyboard hover effects */
 
 #keyboard .row div:hover {
     background: #ddd;
