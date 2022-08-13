@@ -1,8 +1,8 @@
 GAME STEP-BY-STEP PROCESS:
 
 1. User initiates the GAME
-2. Game generates a random 5-letter word to guess.
-3. Keyboard begins to accept input (via typing or clicking).
+2. Game generates a random 5-letter word to guess. //SCRIPTED
+3. Keyboard begins to accept input (via typing or clicking). //SCRIPTED
 4. User then makes a guess (must be full-length worth).
 5. Game compares the guess against the 5-letter word.
 6. Output is handled (letters change colour, keyboard changes colour, game ends if user wins or exceeds 6 guesses).

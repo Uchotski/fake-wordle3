@@ -1,11 +1,10 @@
+import { wordLength } from './constants.js';
+
 let row = 0;
 let col = 1;
 
 const keyboardInput = () => {
     //CONSTANTS:
-    //Length of word to guess:
-    const wordLength = document.getElementById("game-window").getElementsByClassName("row")[0].getElementsByTagName("div").length - 1;
-
     //Row/Tiles to edit:
     const rowToEdit = document.getElementById("game-window").getElementsByClassName("row")[row];
     const tilesInRow = rowToEdit.getElementsByTagName("div");
@@ -30,7 +29,7 @@ const keyboardInput = () => {
     //Adds letters to the input
     if (input.length === 1 && col <= wordLength) {
         tilesInRow[col].innerHTML = `<p>${input}</p>`;
-        if (col < wordLength + 1) col++;
+        if (col < wordLength + 1) { col++ };
     }
 
     //Removes letters from the input
@@ -49,4 +48,4 @@ const keyboardInput = () => {
     return;
 }
 
-export { row, col, keyboardInput }
+export { wordLength, keyboardInput }
