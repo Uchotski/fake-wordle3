@@ -14,7 +14,7 @@ body {
 /* GENERAL TEXT */
 
 h1 {
-    height: 4vmin;
+    font-size: 4vmin;
 }
 
 /* HEADER */
@@ -29,6 +29,7 @@ header {
 nav {
     background: #32b16b;
     height: 5vh;
+    font-size: 2vh;
     display: flex;
     align-items: center;
     justify-content: center;
