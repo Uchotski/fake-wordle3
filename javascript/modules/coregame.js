@@ -1,5 +1,5 @@
 import { wordLength } from './constants.js';
-import { keyboardInput } from './keyboard.js';
+import { keyboardInit } from './keyboard.js';
 
 //Script to generate word:
 const generateWord = (length) => {
@@ -22,18 +22,42 @@ const collectAnswer = (row) => {
 }
 
 //Script to process answer:
-const processAnswer = (userGuess) => {
-    return console.log(trueAnswer, userGuess);
+const processAnswer = (wordToGuess, userGuess) => {
+    return console.log(wordToGuess, userGuess);
 }
 
+//Changes Start button to Stop:
+const startButtonSwap = () => {
+    const startButton = document.getElementById("start");
+
+    if (startButton.innerHTML === "START") {
+        startButton.innerHTML = "STOP";
+        startButton.removeEventListener("click", startGame);
+        startButton.addEventListener("click", resetGame);
+    } else {
+        startButton.innerHTML = "START";
+        startButton.removeEventListener("click", resetGame);
+        startButton.addEventListener("click", startGame);
+    }
+}
+
+//Resets the game:
+const resetGame = () => {
+    //Code to go here;
+}
+
+//Starts and runs the game:
 const startGame = () => {
+    //Change Start Button:
+    startButtonSwap();
+
     //Generate a word:
     const wordToGuess = generateWord(wordLength);
-    console.log(wordToGuess);
 
-    //Make the keyboard typeable:
-    document.getElementById("keyboard").addEventListener("click", keyboardInput);
-    document.addEventListener("keydown", keyboardInput);
+    //Make the keyboard typeable, and passes the word to guess into the keyboard:
+    let row = 0;
+    let col = 1;
+    keyboardInit(row, col, wordToGuess, true);
 }
 
 export { collectAnswer, processAnswer, startGame }
